@@ -16,23 +16,16 @@ class TVeoRepositoryImpl @Inject constructor(
                 it.toDomain()
             }
         }
-    /*
-    class MarvelRepositoryImpl @Inject constructor(
-    private val dataSource: MarvelDataSource
-) : MarvelRepository {
-    override fun getMarvelCharactersList(): Single<List<CharacterModel>> =
-        dataSource.getCharacters().mapNetworkErrors().map { marvelEntity ->
-            marvelEntity.data.characters?.map {
+
+    override fun getLimitedMovieList(from: Int, count: Int): Single<List<MovieModel>> =
+        dataSource.getLimitedMovieList(from, count).mapNetworkErrors().map { tVeoEntity ->
+            tVeoEntity.response.map {
                 it.toDomain()
             }
         }
 
-    override fun getMarvelCharacterDetail(id: String): Single<CharacterModel> =
-        dataSource.getCharacterDetail(id).mapNetworkErrors().map { marvelEntity ->
-            marvelEntity.data.characters?.let {
-                it[0].toDomain()
-            }
+    override fun getMovieDetail(id: String): Single<MovieModel> =
+        dataSource.getMovieDetail(id).mapNetworkErrors().map { movieEntity ->
+            movieEntity.toDomain()
         }
-}
-     */
 }

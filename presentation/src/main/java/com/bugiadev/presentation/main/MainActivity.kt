@@ -1,5 +1,7 @@
 package com.bugiadev.presentation.main
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -31,9 +33,10 @@ class MainActivity : AppCompatActivity(), TVeoInjection {
             R.layout.activity_main
         )
 
-        binding.tvHello.text = intent.getIntExtra(MOVIES_NUMBER, DEFAULT_VALUE).toString()
         tVeoComponent = DaggerTVeoComponent.factory().create(injector)
     }
 
     override fun getTVeoComponent(): TVeoComponent = tVeoComponent
+    override fun getSharedPreferences(): SharedPreferences = getSharedPreferences(
+        getString(R.string.preference_file_key), Context.MODE_PRIVATE)
 }

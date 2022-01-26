@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="presentation/src/main/res/drawable-hdpi/progress.xml" value="0.15989583333333332" />
+        <entry key="presentation/src/main/res/drawable/progress.xml" value="0.15989583333333332" />
+        <entry key="presentation/src/main/res/drawable/progress_black.xml" value="0.15989583333333332" />
+        <entry key="presentation/src/main/res/drawable/semi_white_circle_background.xml" value="0.2518518518518518" />
         <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="presentation/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="presentation/src/main/res/layout/fragment_detail.xml" value="0.18297101449275363" />
+        <entry key="presentation/src/main/res/layout/fragment_list.xml" value="0.19701086956521738" />
+        <entry key="presentation/src/main/res/layout/fragment_loading_dialog.xml" value="0.19701086956521738" />
+        <entry key="presentation/src/main/res/layout/movie_item_view.xml" value="0.19701086956521738" />
       </map>
     </option>
   </component>

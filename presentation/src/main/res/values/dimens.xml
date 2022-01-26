@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progress_size">26dp</dimen>
+    <dimen name="smallest_space">4dp</dimen>
+    <dimen name="small_space">16dp</dimen>
+    <dimen name="row_list_height">300dp</dimen>
+    <dimen name="row_list_width">300dp</dimen>
+    <dimen name="row_image_size">48dp</dimen>
+    <dimen name="row_text_size">20sp</dimen>
+    <dimen name="row_button_size">25sp</dimen>
+    <dimen name="fav_image_size">48dp</dimen>
+    <dimen name="detail_description_margin">150dp</dimen>
+</resources>

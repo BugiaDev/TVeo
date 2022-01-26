@@ -21,7 +21,7 @@ open class BaseViewModel : ViewModel() {
         else postError(UnexpectedError)
     }
 
-    protected fun postError(errorState: ErrorState) {
+    private fun postError(errorState: ErrorState) {
         _error.postValue(errorState)
     }
 }

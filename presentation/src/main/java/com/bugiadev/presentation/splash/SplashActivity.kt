@@ -64,6 +64,7 @@ class SplashActivity : AppCompatActivity() {
 
         viewModel.error.observe(this, {
             Log.e("Kiko", it.toString())
+            // TODO: Error handling (dialog or prettier ErrorActivity)
         })
     }
 

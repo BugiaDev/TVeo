@@ -5,8 +5,6 @@ import io.reactivex.Single
 
 interface TVeoRepository {
     fun getCompleteMovieList() : Single<List<MovieModel>>
-    /*
-        fun getMarvelCharactersList(): Single<List<CharacterModel>>
-    fun getMarvelCharacterDetail(id: String): Single<CharacterModel>
-     */
+    fun getLimitedMovieList(from: Int, count: Int) : Single<List<MovieModel>>
+    fun getMovieDetail(id: String) : Single<MovieModel>
 }
