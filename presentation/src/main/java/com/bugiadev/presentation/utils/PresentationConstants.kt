@@ -6,4 +6,5 @@ object PresentationConstants {
     const val SCROLL_DIRECTION_BOTTOM = 1
     const val ATTACHMENT_COVER_NAME = "COVER4_1"
     const val FAVORITES_SET_NAME = "favorites"
+    const val EXTERNAL_ID_TRAILING = "_PAGE_HD"
 }

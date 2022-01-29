@@ -12,6 +12,7 @@
         <entry key="presentation/src/main/res/layout/fragment_detail.xml" value="0.18297101449275363" />
         <entry key="presentation/src/main/res/layout/fragment_list.xml" value="0.19701086956521738" />
         <entry key="presentation/src/main/res/layout/fragment_loading_dialog.xml" value="0.19701086956521738" />
+        <entry key="presentation/src/main/res/layout/fragment_recommendations.xml" value="0.14375" />
         <entry key="presentation/src/main/res/layout/movie_item_view.xml" value="0.19701086956521738" />
       </map>
     </option>

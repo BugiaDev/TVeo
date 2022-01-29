@@ -1,69 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.DetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/bright_brown"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.fragment.DetailFragment">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.card.MaterialCardView
+        <ImageView
+            android:id="@+id/movie_image"
+            style="@style/autoAdjustImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/gl3h"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/tveo_placeholder"
+            android:contentDescription="@null" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl3h"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:transitionName="transition_name">
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".3" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:background="@color/purple_200"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/small_space"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/gl3h">
+
+            <TextView
+                android:id="@+id/title_textview"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:gravity="center"
+                tools:text="Kramer VS Kramer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"/>
 
-                <ImageView
-                    android:id="@+id/character_image"
-                    style="@style/autoAdjustImageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    app:layout_constraintBottom_toBottomOf="@id/gl3h"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:src="@drawable/tveo_placeholder"
-                    android:contentDescription="@null" />
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/detail_type_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/gl3h"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent=".3" />
+                <TextView
+                    android:id="@+id/type_textview"
+                    android:textColor="@color/semi_transparent_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:drawablePadding="@dimen/smallest_space"
+                    tools:text="Drama"
+                    android:layout_marginStart="@dimen/small_space"
+                    app:drawableStartCompat="@drawable/ic_movie"
+                    app:drawableTint="@color/semi_transparent_white" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="@dimen/small_space"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/gl3h">
+                <TextView
+                    android:id="@+id/duration_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/small_space"
+                    android:drawablePadding="@dimen/smallest_space"
+                    android:textColor="@color/semi_transparent_white"
+                    tools:ignore="RelativeOverlap"
+                    tools:text="1h 38m"
+                    app:drawableStartCompat="@drawable/ic_clock"
+                    app:drawableTint="@color/semi_transparent_white" />
 
-                    <TextView
-                        android:id="@+id/name_textview"
-                        android:textColor="@color/white"
-                        android:textAllCaps="true"
-                        android:textSize="20sp"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/smallest_space" />
+            </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/description_textview"
-                        android:textColor="@color/teal_200"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/detail_description_margin" />
-                </LinearLayout>
+            <TextView
+                android:id="@+id/recommendations_button"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/recommendations_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/description_textview"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/detail_description_margin" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

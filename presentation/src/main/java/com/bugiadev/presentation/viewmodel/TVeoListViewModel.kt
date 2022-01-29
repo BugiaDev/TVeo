@@ -9,7 +9,6 @@ import com.bugiadev.presentation.utils.SingleLiveEvent
 import com.bugiadev.presentation.utils.prepareForUI
 import javax.inject.Inject
 import com.bugiadev.presentation.utils.subscribe
-import okhttp3.internal.notify
 
 class TVeoListViewModel @Inject constructor(
     private val repository: TVeoRepository

@@ -84,7 +84,7 @@ class ListFragment : BaseFragment<FragmentListBinding>() {
 
         viewModel.selectedMovie.observe(viewLifecycleOwner, { id ->
             findNavController().navigate(
-                ListFragmentDirections.actionListToDetail(id.toString())
+                ListFragmentDirections.actionListToDetail(id)
             )
         })
     }

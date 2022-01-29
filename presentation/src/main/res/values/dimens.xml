@@ -9,5 +9,6 @@
     <dimen name="row_text_size">20sp</dimen>
     <dimen name="row_button_size">25sp</dimen>
     <dimen name="fav_image_size">48dp</dimen>
-    <dimen name="detail_description_margin">150dp</dimen>
+    <dimen name="detail_type_margin">10dp</dimen>
+    <dimen name="detail_description_margin">20dp</dimen>
 </resources>

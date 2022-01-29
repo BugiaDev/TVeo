@@ -1,5 +1,6 @@
 package com.bugiadev.di.modules
 
+import android.util.Log
 import com.bugiadev.data.network.TVeoRXCallAdapterFactory
 import com.bugiadev.di.BuildConfig
 import com.bugiadev.di.annotations.ApplicationScope
@@ -38,6 +39,7 @@ object NetworkModule {
                     .newBuilder()
                     .url(newUrl)
                     .build()
+                Log.d("TVEO", newRequest.toString())
                 chain.proceed(newRequest)
             }
 
