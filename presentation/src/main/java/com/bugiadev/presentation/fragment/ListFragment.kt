@@ -58,7 +58,10 @@ class ListFragment : BaseFragment<FragmentListBinding>() {
 
         viewModel.movies.observe(viewLifecycleOwner, { movies ->
             if (this::adapter.isInitialized) {
-                if (movies.isNotEmpty()) adapter.addMovies(movies)
+                if (movies.isNotEmpty()) {
+                    adapter.addMovies(movies)
+                    if (binding.movieList.adapter == null) setAdapter()
+                }
             } else {
                 adapter = TVeoMoviesAdapter(
                     onItemClick = { display ->
@@ -72,13 +75,7 @@ class ListFragment : BaseFragment<FragmentListBinding>() {
                     items = movies
                 )
 
-                binding.movieList.adapter = adapter
-                binding.movieList.addItemDecoration(
-                    DividerItemDecoration(
-                        requireContext(),
-                        DividerItemDecoration.VERTICAL
-                    )
-                )
+                setAdapter()
             }
         })
 
@@ -100,6 +97,16 @@ class ListFragment : BaseFragment<FragmentListBinding>() {
         }
 
         binding.movieList.addOnScrollListener(scrollListener)
+    }
+
+    private fun setAdapter() {
+        binding.movieList.adapter = adapter
+        binding.movieList.addItemDecoration(
+            DividerItemDecoration(
+                requireContext(),
+                DividerItemDecoration.VERTICAL
+            )
+        )
     }
 
     @SuppressLint("MutatingSharedPrefs", "NotifyDataSetChanged")
